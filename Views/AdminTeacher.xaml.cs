@@ -78,15 +78,13 @@ namespace Student_Attendence_Management_System.Views
         }
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
+            Teacher selectedTeacher = (Teacher)MembersDataGrid.SelectedItem;
             try
             {
                 using (SQLiteConnection connection = new SQLiteConnection(App.DatabasePath))
                 {
                     connection.CreateTable<Teacher>();
-                    foreach (var teacher in MembersDataGrid.Items)
-                    {
-                        connection.Update(teacher);
-                    }
+                    connection.Update(selectedTeacher);
                 }
                 MessageBox.Show("Recordes Updated!", "Update", MessageBoxButton.OK, MessageBoxImage.Information);
             }

@@ -69,9 +69,9 @@ namespace Student_Attendence_Management_System.Login
 
                     if (teacher != null && teacher.Password == txtPassword.Password)
                     {
-                        //StudentView view = new StudentView(teacher);
-                        //view.Show();
-                        //this.Close();
+                        TeacherView view = new TeacherView(teacher);
+                        view.Show();
+                        this.Close();
                     }
                     else
                     {

@@ -13,7 +13,7 @@ namespace Student_Attendence_Management_System.Database
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         [ForeignKey("Student")]
-        public int StudentId { get; set; }
+        public string StudentId { get; set; }
         [ForeignKey("Course")]
         public int CourseId { get; set; }
     }

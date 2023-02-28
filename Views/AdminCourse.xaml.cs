@@ -69,17 +69,24 @@ namespace Student_Attendence_Management_System.Views
         {
             if (NameTextBox.Text != null && TeacherTextBox.Text != null)
             {
-                using (var db = new SQLiteConnection(App.DatabasePath))
+                try
                 {
-                    var course = new Course
+                    using (var db = new SQLiteConnection(App.DatabasePath))
                     {
-                        Name = NameTextBox.Text,
-                        TeacherID = TeacherTextBox.Text,
-                    };
+                        var course = new Course
+                        {
+                            Name = NameTextBox.Text,
+                            TeacherID = TeacherTextBox.Text,
+                        };
 
-                    db.CreateTable<Course>();
-                    db.Insert(course);
-                    LoadGridCourse();
+                        db.CreateTable<Course>();
+                        db.Insert(course);
+                        LoadGridCourse();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -89,17 +96,15 @@ namespace Student_Attendence_Management_System.Views
         }
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
+            Course selectedCourse = (Course)MembersDataGrid.SelectedItem;
             try
             {
                 using (SQLiteConnection connection = new SQLiteConnection(App.DatabasePath))
                 {
                     connection.CreateTable<Course>();
-                    foreach (var course in MembersDataGrid.Items)
-                    {
-                        connection.Update(course);
-                    }
+                    connection.Update(selectedCourse);
                 }
-                MessageBox.Show("Recordes Updated!", "Update", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Record Updated!", "Update", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {

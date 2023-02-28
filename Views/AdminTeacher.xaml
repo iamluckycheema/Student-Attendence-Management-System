@@ -107,15 +107,15 @@ xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
             <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}"
                           Grid.Row="5" x:Name="MembersDataGrid" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                    <!--<DataGridCheckBoxColumn CanUserResize="False" Width="auto">
                         <DataGridCheckBoxColumn.HeaderTemplate>
                             <DataTemplate>
                                 <CheckBox/>
                             </DataTemplate>
                         </DataGridCheckBoxColumn.HeaderTemplate>
-                    </DataGridCheckBoxColumn>
+                    </DataGridCheckBoxColumn>-->
 
-                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" CanUserResize="False" Width="auto"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" IsReadOnly="True" CanUserResize="False" Width="auto"/>
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}"  IsReadOnly="False" CanUserReorder="False" Width="*"/>
                     <DataGridTextColumn Header="Faculty ID" Binding="{Binding FacultyId}" CanUserResize="False" Width="*"/>
                     <DataGridTextColumn Header="Password" Binding="{Binding Password}" CanUserResize="False" Width="*"/>

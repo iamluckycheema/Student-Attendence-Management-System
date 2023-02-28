@@ -75,7 +75,7 @@
                             <Button x:Name="CourseReg" Style="{StaticResource menuButton}" Click="CourseReg_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Course Registration"/>
+                                    <TextBlock Text="Registration"/>
                                 </StackPanel>
                             </Button>
 
