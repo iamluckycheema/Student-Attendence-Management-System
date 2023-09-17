@@ -1,19 +1,23 @@
-# Student-Attendence-Management-System
-Well it's a simple but with an Rich Interface in WPF (XAML & C#) Project on Attendence Management System for College.
+# Attendance Management System
+This is a simple but rich interface WPF (XAML & C#) project on attendance management system for college.
 
-Admin Component:
-Default ID as: 20011556-038 and Password: 1234 
-Can Add / Remove/ Edit Teachers, Students & Courses
-Changing the passwords is also done by administrator.
-Can also register students with the courses.
+<h2> Features: </h2>
 
-Students Component:
-Students can view their attendence in different courses they are registered in. You have to add a student first to login a register course to do so.
+<h3> Admin Component:</h3>
+- Default ID: 20011556-038
+- Default Password: 1234
+- Add, remove, and edit teachers, students, and courses
+- Change passwords
+- Register students with courses
+<h3> Student Component:</h3>
+- View attendance in different courses
+<h3> Teacher Component (under development):</h3>
+- Adding and editing attendance is not yet supported
 
-Teacher Component (Underdevelopment):
-Adding and Editing attendence is not supported yet!
-Students Component was test by manually adding data to database.
+<h2>Usage:</h2>
 
-Further details about the system maybe added in future. 
-
-
+To login as an admin, use the default ID and password.
+To add a student, click on the "Add Student" button and enter the student's details.
+To register a student for a course, click on the "Register for Course" button and select the student and course.
+To view a student's attendance, click on the "View Attendance" button and select the student and course.
+Further details about the system may be added in the future.
